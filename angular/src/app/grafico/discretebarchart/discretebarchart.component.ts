@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 declare let d3: any;
 
 @Component({
-  selector: 'app-simple',
-  templateUrl: './simple.component.html',
-  styleUrls: ['./simple.component.css']
+  selector: 'app-discretebarchart',
+  templateUrl: './discretebarchart.component.html',
+  styleUrls: ['./discretebarchart.component.css']
 })
-export class SimpleComponent implements OnInit {
+export class DiscretebarchartComponent implements OnInit {
 
   options: any;
   data: any;
