@@ -20,7 +20,7 @@ import { routing } from './app.routing';
     ReactiveFormsModule,
     MaterialModule,
     GraficoModule,
-    routing
+    routing,
   ],
   providers: [],
   bootstrap: [AppComponent]
