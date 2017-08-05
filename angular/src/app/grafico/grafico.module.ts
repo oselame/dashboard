@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 
 import { GoogleChartDirective } from './google-chart/google-chart.component';
-import { SimpleComponent } from './simple/simple.component';
+import { PiechartComponent } from './piechart/piechart.component';
+import { ColumnchartComponent } from './columnchart/columnchart.component';
 
 @NgModule({
   imports: [
   ],
   exports: [
-    SimpleComponent
+    PiechartComponent,
+    ColumnchartComponent
   ],
   declarations: [
     GoogleChartDirective,
-    SimpleComponent
+    PiechartComponent,
+    ColumnchartComponent
   ]
 })
 export class GraficoModule { }

@@ -1,3 +1,20 @@
+/*
 md-grid-tile {
-  background: lightblue;
+  background: whitesmoke;
+}
+
+.example-card {
+  width: 400px;
+  height: 200px;
+}
+
+.example-header-image {
+  background-image: url('../../assets/shiba1.jpg');
+  background-size: cover;
+  height: 50px;
+}
+*/
+
+div {
+  /* border: 1px solid; */
 }

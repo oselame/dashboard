@@ -20,9 +20,12 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/nvd3/build/nv.d3.css"
+        "../node_modules/materialize-css/dist/css/materialize.css"
       ],
       "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/hammerjs/hammer.js",
+        "../node_modules/materialize-css/dist/js/materialize.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

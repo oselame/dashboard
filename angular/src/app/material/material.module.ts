@@ -6,7 +6,8 @@ import {MdButtonModule,
         MdCheckboxModule,
         MdTableModule,
         MdAutocompleteModule,
-        MdGridListModule
+        MdGridListModule,
+        MdCardModule
       } from '@angular/material';
 
 @NgModule({
@@ -15,12 +16,14 @@ import {MdButtonModule,
             MdCheckboxModule,
             MdTableModule,
             MdAutocompleteModule,
-            MdGridListModule],
+            MdGridListModule,
+            MdCardModule],
   exports: [BrowserAnimationsModule,
             MdButtonModule,
             MdCheckboxModule,
             MdTableModule,
             MdAutocompleteModule,
-            MdGridListModule],
+            MdGridListModule,
+            MdCardModule],
 })
 export class MaterialModule { }

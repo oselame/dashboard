@@ -1,16 +1,36 @@
+
+<!--
 <md-grid-list cols="3" rowHeight="100px" gutterSize="5px">
   <md-grid-tile [colspan]="2" [rowspan]="3">
-      <app-simple></app-simple>
+    <md-card class="example-card">
+      <md-card-header>
+        <div md-card-avatar class="example-header-image"></div>
+        <md-card-title>Shiba Inu</md-card-title>
+        <md-card-subtitle>Dog Breed</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image src="../../assets/shiba1.jpg">
+      <md-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button>LIKE</button>
+        <button md-button>SHARE</button>
+      </md-card-actions>
+    </md-card>
   </md-grid-tile>
+
   <md-grid-tile [rowspan]="3">
-    sss
+      <app-piechart></app-piechart>
   </md-grid-tile>
 
   <md-grid-tile [colspan]="2" [rowspan]="3">
-    Atestados
+    <app-columnchart></app-columnchart>
   </md-grid-tile>
   <md-grid-tile [rowspan]="3">
-    sdfsdfsd
   </md-grid-tile>
 
 
@@ -21,3 +41,36 @@
   </md-grid-tile>
 
 </md-grid-list>
+-->
+
+
+<div class="row">
+    <div class="col s12"><p>s12</p></div>
+    <div class="col s12 m4 l4">
+
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <div class="card ">
+            <div class="card-content white-text">
+              <span class="card-title">Avanço Financeiro</span>
+              <p><app-piechart></app-piechart></p>
+            </div>
+            <div class="card-action">
+              <a href="#">PDF</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class="col s12 m4 l4"><p></p></div>
+    <div class="col s12 m4 l4"><p><app-columnchart></app-columnchart></p></div>
+  </div>
+  <div class="row">
+    <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
+    <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
+    <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
+    <div class="col s12 m6 l3"><p>s12 m6 l3</p></div>
+  </div>
