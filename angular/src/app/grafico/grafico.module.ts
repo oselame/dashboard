@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 
-import { GoogleChartDirective } from './google-chart/google-chart.component';
-import { SimpleComponent } from './simple/simple.component';
+import { AreaComponent } from './area/area.component';
 
 @NgModule({
   imports: [
   ],
   exports: [
-    SimpleComponent
+    AreaComponent
   ],
   declarations: [
-    GoogleChartDirective,
-    SimpleComponent
+    AreaComponent
   ]
 })
 export class GraficoModule { }
