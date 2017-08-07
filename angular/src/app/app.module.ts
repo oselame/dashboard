@@ -1,32 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MaterialModule } from './material/material.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { Ng2HighchartsModule } from 'ng2-highcharts';
 
-import { ChartModule } from 'angular2-highcharts';
-
-import { GraficoModule } from './grafico/grafico.module';
-
-import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
-import { routing } from './app.routing';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
-    MaterialModule,
-    GraficoModule,
-    ChartModule,
-    routing,
-    NgbModule.forRoot()
+    HttpModule,
+    Ng2HighchartsModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

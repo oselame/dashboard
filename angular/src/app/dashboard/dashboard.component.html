@@ -1,46 +1,98 @@
-<!--
-<md-grid-list cols="3" rowHeight="100px" gutterSize="5px">
-  <md-grid-tile [colspan]="2" [rowspan]="3">
-      sss
-  </md-grid-tile>
-  <md-grid-tile [rowspan]="3">
-    sss
-  </md-grid-tile>
-
-  <md-grid-tile [colspan]="2" [rowspan]="3">
-    Atestados
-  </md-grid-tile>
-  <md-grid-tile [rowspan]="3">
-    sdfsdfsd
-  </md-grid-tile>
-
-
-  <md-grid-tile [colspan]="2" [rowspan]="3">
-  </md-grid-tile>
-  <md-grid-tile [rowspan]="3">
-    Atestados
-  </md-grid-tile>
-
-</md-grid-list>
-
--->
-<div class="text-center">    
-  <h3>Controle do projeto GESA</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <app-area></app-area>
-      <!--
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      -->
-      <p>Current Project</p>
+<div class="row">
+  <div class="col-sm-6 col-md-6">
+    <!-- -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Pagamentos pendentes</h2>
+      </div>
+      <div class="panel-body ">
+        <!-- -->
+        <table class="table table-hover">
+          <thead>
+            <tr class="active">
+              <th>#</th>
+              <th>Contrato</th>
+              <th>Documento</th>
+              <th>Parcela</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>CTRL 001/2017</td>
+              <td>DOC 001/2017</td>
+              <td>2.000,00</td>
+            </tr>
+            <tr class="warning">
+              <th scope="row">2</th>
+              <td>CTRL 001/2017</td>
+              <td>DOC 001/2017</td>
+              <td>2.000,00</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>CTRL 001/2017</td>
+              <td>DOC 001/2017</td>
+              <td>2.000,00</td>
+            </tr>
+            <tr class="danger">
+              <th scope="row">4</th>
+              <td>CTRL 001/2017</td>
+              <td>DOC 001/2017</td>
+              <td>2.000,00</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- -->
+      </div>
     </div>
-    <div class="col-sm-4"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Project 2</p>    
-    </div>
-    <div class="col-sm-4">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Project 2</p>    
-    </div>
+    <!-- -->
   </div>
-</div><br>
+  <div class="col-sm-6 col-md-6">
+    <!-- -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Percentual desembolsado</h2>
+      </div>
+      <div class="panel-body ">
+        <app-solidgauge></app-solidgauge>
+      </div>
+    </div>
+    <!-- -->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-6">
+    <!-- -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Panel heading without title</h2>
+      </div>
+      <div class="panel-body ">
+        <app-gauge-chart></app-gauge-chart>
+      </div>
+    </div>
+    <!-- -->
+  </div>
+  <div class="col-sm-6 col-md-6">
+    <!-- -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Panel heading without title</h2>
+      </div>
+      <div class="panel-body ">
+        <app-column-chart></app-column-chart>
+      </div>
+    </div>
+    <!-- -->
+  </div>
+</div>
+
+<div>
+  <!--
+    <app-column-chart></app-column-chart>
+    <app-basic-line-chart></app-basic-line-chart>
+    <app-gauge-chart></app-gauge-chart> 
+  -->
+</div>

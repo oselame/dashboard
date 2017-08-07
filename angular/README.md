@@ -1,6 +1,10 @@
 # Dashboard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+http://getbootstrap.com/components/#panels
+https://www.npmjs.com/package/ngx-bootstrap
+https://github.com/valor-software/ngx-bootstrap
+http://valor-software.com/ngx-bootstrap/#/
 
 ## Development server
 
