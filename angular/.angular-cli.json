@@ -22,11 +22,7 @@
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "styles.css"
       ],
-      "scripts": [
-        "../node_modules/highcharts/highcharts.js",
-        "../node_modules/highcharts/highcharts-more.js",
-        "../node_modules/highcharts/highcharts-3d.js"
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
