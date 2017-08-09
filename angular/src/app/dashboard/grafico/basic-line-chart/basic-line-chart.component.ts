@@ -45,7 +45,7 @@ export class BasicLineChartComponent implements OnInit {
         showDuration: 100,
         style: { 'position': 'absolute', 'backgroundColor': '#ffffff', 'opacity': 0.5, 'textAlign': 'center' }
       },
-      
+
       credits: {
         enabled: false
       },

@@ -7,6 +7,7 @@ import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
 import { GraficoService } from './grafico/grafico.service';
 import { DashboardComponent } from './dashboard.component';
 import { BasicLineChartComponent } from './grafico/basic-line-chart/basic-line-chart.component';
+import { PieChartComponent } from './grafico/pie-chart/pie-chart.component';
 
 export function highchartsFactory() {
     const hc = require('highcharts');
@@ -23,14 +24,16 @@ export function highchartsFactory() {
 @NgModule({
     declarations: [
         DashboardComponent,
-        BasicLineChartComponent
+        BasicLineChartComponent,
+        PieChartComponent
     ],
     imports: [
         ChartModule
     ],
     exports: [
         DashboardComponent,
-        BasicLineChartComponent
+        BasicLineChartComponent,
+        PieChartComponent
     ],
     providers: [
         {provide: HighchartsStatic, useFactory: highchartsFactory},
