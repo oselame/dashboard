@@ -1,5 +1,5 @@
-import { GraficoService } from './../grafico.service';
 import { Component, OnInit } from '@angular/core';
+import { GraficoService } from './../grafico.service';
 
 @Component({
   selector: 'app-pie-chart',

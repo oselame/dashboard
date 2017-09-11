@@ -4,10 +4,13 @@ import { ChartModule } from 'angular2-highcharts';
 import * as highcharts from 'highcharts';
 import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
 
+import { MaterialModule } from './../material-design/material.module';
+
 import { GraficoService } from './grafico/grafico.service';
 import { DashboardComponent } from './dashboard.component';
 import { BasicLineChartComponent } from './grafico/basic-line-chart/basic-line-chart.component';
 import { PieChartComponent } from './grafico/pie-chart/pie-chart.component';
+import { GaugeChartComponent } from './grafico/gauge-chart/gauge-chart.component';
 
 export function highchartsFactory() {
     const hc = require('highcharts');
@@ -25,10 +28,12 @@ export function highchartsFactory() {
     declarations: [
         DashboardComponent,
         BasicLineChartComponent,
-        PieChartComponent
+        PieChartComponent,
+        GaugeChartComponent
     ],
     imports: [
-        ChartModule
+        ChartModule,
+        MaterialModule
     ],
     exports: [
         DashboardComponent,

@@ -2,8 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
-import { DashboardModule } from './dashboard/dashboard.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material-design/material.module';
 
+import { DashboardModule } from './dashboard/dashboard.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -13,7 +15,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     HttpModule,
-    DashboardModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    DashboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
