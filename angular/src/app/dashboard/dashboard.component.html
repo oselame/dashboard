@@ -1,21 +1,8 @@
-<div>
-  &nbsp;
-</div>
-<md-grid-list cols="2" rowHeight="2:1" gutterSize="5">
-    <md-grid-tile [colspan]="1" [rowspan]="1">
-        <app-gauge-chart></app-gauge-chart>
-    </md-grid-tile>
-    
-    <md-grid-tile>
-        <md-card>
-          </md-card>
-    </md-grid-tile>
-    
-    <md-grid-tile>3
-
-    </md-grid-tile>
-    
-    <md-grid-tile>4
-
-    </md-grid-tile>
-  </md-grid-list>
+<md-tab-group>
+    <md-tab label="Acompanhamento">
+        <app-acompanhamento-tab></app-acompanhamento-tab>
+    </md-tab>
+    <md-tab label="Mensagens">
+        <app-mensagens-tab></app-mensagens-tab>
+    </md-tab>
+</md-tab-group>
