@@ -1,17 +1,46 @@
 import { NgModule } from '@angular/core';
 
-import { NvD3Component } from 'ng2-nvd3'
+import { MaterialModule } from './../material-design/material.module';
+import { ChartModule } from 'angular2-highcharts';
+import * as highcharts from 'highcharts';
+import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
 
-import { LinechartComponent } from './linechart/linechart.component';
-import { PiechartComponent } from './piechart/piechart.component';
-import { DiscretebarchartComponent } from './discretebarchart/discretebarchart.component';
+import { BasicLineChartComponent } from './basic-line-chart/basic-line-chart.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { GaugeChartComponent } from './gauge-chart/gauge-chart.component';
 
-import 'd3';
-import 'nvd3';
+import { GraficoService } from './grafico.service';
+
+export function highchartsFactory() {
+    const hc = require('highcharts');
+    const hcm = require('highcharts/highcharts-more');
+    // const exp = require('highcharts/modules/exporting');
+    const sg = require('highcharts/modules/solid-gauge');
+    hcm(hc);
+    // exp(hc);
+    sg(hc);
+    return hc;
+}
+
 
 @NgModule({
-  imports: [],
-  exports: [ LinechartComponent, PiechartComponent, DiscretebarchartComponent ],
-  declarations: [NvD3Component, LinechartComponent, PiechartComponent, DiscretebarchartComponent]
+    declarations: [
+        BasicLineChartComponent,
+        PieChartComponent,
+        GaugeChartComponent
+    ],
+    imports: [
+        ChartModule,
+        MaterialModule
+    ],
+    exports: [
+        BasicLineChartComponent,
+        PieChartComponent,
+        GaugeChartComponent
+    ],
+    providers: [
+        {provide: HighchartsStatic, useFactory: highchartsFactory},
+        GraficoService
+    ]
 })
 export class GraficoModule { }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PiechartComponent } from './piechart.component';
+import { BasicLineChartComponent } from './basic-line-chart.component';
 
-describe('PiechartComponent', () => {
-  let component: PiechartComponent;
-  let fixture: ComponentFixture<PiechartComponent>;
+describe('BasicLineChartComponent', () => {
+  let component: BasicLineChartComponent;
+  let fixture: ComponentFixture<BasicLineChartComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PiechartComponent ]
+      declarations: [ BasicLineChartComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PiechartComponent);
+    fixture = TestBed.createComponent(BasicLineChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

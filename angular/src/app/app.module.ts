@@ -1,28 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material-design/material.module';
+
+import { AppConfigModule } from './app-config.module';
+import { ConfigModule } from './config/config.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { AppComponent } from './app.component';
 import { GraficoModule } from './grafico/grafico.module';
 
-import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DesembolsoService } from './services/desembolso/desembolso.service';
 
-import { routing } from './app.routing';
+import { appRouting } from './app.routing';
+
+import 'hammerjs'
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DashboardComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
+    HttpModule,
+    BrowserAnimationsModule,
+    AppConfigModule,
     MaterialModule,
+    DashboardModule,
     GraficoModule,
-    routing
+    ConfigModule,
+    appRouting
   ],
-  providers: [],
+  providers: [
+    DesembolsoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

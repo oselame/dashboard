@@ -1,20 +1,8 @@
-<md-grid-list cols="3" rowHeight="100px" gutterSize="5px">
-  <md-grid-tile [colspan]="2" [rowspan]="3">
-    
-  </md-grid-tile>
-  <md-grid-tile [rowspan]="3"><app-linechart></app-linechart></md-grid-tile>
-
-  <md-grid-tile [colspan]="2" [rowspan]="3">
-    Atestados
-  </md-grid-tile>
-  <md-grid-tile [rowspan]="3"><app-piechart></app-piechart></md-grid-tile>
-
-
-  <md-grid-tile [colspan]="2" [rowspan]="3">
-    Atestados
-  </md-grid-tile>
-  <md-grid-tile [rowspan]="3">
-      <app-discretebarchart></app-discretebarchart>
-  </md-grid-tile>
-
-</md-grid-list>
+<md-tab-group>
+    <md-tab label="Acompanhamento">
+        <app-acompanhamento-tab></app-acompanhamento-tab>
+    </md-tab>
+    <md-tab label="Mensagens">
+        <app-mensagens-tab></app-mensagens-tab>
+    </md-tab>
+</md-tab-group>
