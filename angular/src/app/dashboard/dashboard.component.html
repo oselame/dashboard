@@ -1,23 +1,21 @@
-<md-grid-list cols="2" rowHeight="2:1" gutterSize="10">
-    <md-grid-tile class="md-grid-tile">
-        <md-card class="example-card">
-        <md-card-header>
-          <div md-card-avatar class="example-header-image"></div>
-          <md-card-title>Percentual Desembolsado</md-card-title>
-          <md-card-subtitle>Total de desembolsos efetutados</md-card-subtitle>
-        </md-card-header>
-        <md-card-content>
-          <app-pie-chart></app-pie-chart>
-        </md-card-content>
-      </md-card>
+<div>
+  &nbsp;
+</div>
+<md-grid-list cols="2" rowHeight="2:1" gutterSize="5">
+    <md-grid-tile [colspan]="1" [rowspan]="1">
+        <app-gauge-chart></app-gauge-chart>
     </md-grid-tile>
     
-    
     <md-grid-tile>
-        <md-card class="example-card">
-            <md-card-content>
-                <app-gauge-chart></app-gauge-chart>
-              </md-card-content>
+        <md-card>
           </md-card>
+    </md-grid-tile>
+    
+    <md-grid-tile>3
+
+    </md-grid-tile>
+    
+    <md-grid-tile>4
+
     </md-grid-tile>
   </md-grid-list>

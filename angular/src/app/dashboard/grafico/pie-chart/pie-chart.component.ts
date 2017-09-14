@@ -62,12 +62,12 @@ export class PieChartComponent implements OnInit {
   }
 
   loadDataChart() {
-    this.graficoService.findTotalPagamentoPendentesPorOrigem()
+    /*this.graficoService.findTotalPagamentoPendentesPorOrigem()
         .subscribe(data => {
             this.dataChart.forEach(element => {
                 this.dataChart.push({ name: element.sgOrigem, y: element.vlReembolso });
             });
-        });
+        });*/
   }
 
 }

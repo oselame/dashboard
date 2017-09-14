@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GraficoService } from './../grafico.service';
+import * as Highcharts from 'highcharts';
 
 @Component({
   selector: 'app-gauge-chart',
@@ -8,8 +9,10 @@ import { GraficoService } from './../grafico.service';
 })
 export class GaugeChartComponent implements OnInit {
 
-  public gaugeChartOptions: any;
-  dataChart: any = [];
+  options: any;
+  chart: any;
+
+  constructor(public graficoService: GraficoService) { }
 
   ngOnInit() {
     this.loadChart();
@@ -17,10 +20,13 @@ export class GaugeChartComponent implements OnInit {
   }
 
   loadChart() {
-    this.gaugeChartOptions = {
+    this.options = {
       chart: {
           type: 'solidgauge',
           spacing: [15, 15, 15, 15]
+      },
+      credits: {
+        enabled: false
       },
 
       title: {
@@ -32,7 +38,7 @@ export class GaugeChartComponent implements OnInit {
 
       pane: {
           center: ['50%', '85%'],
-          size: '140%',
+          size: '150%',
           startAngle: -90,
           endAngle: 90,
           background: {
@@ -49,11 +55,14 @@ export class GaugeChartComponent implements OnInit {
 
       // the value axis
       yAxis: {
+        minColor: "#DDDF0D",
+        maxColor: "#DF5353",
+        /*
           stops: [
-              [0.8, '#DDDF0D'], // red
-              [0.95, '#55BF3B'], // yellow
-              [0.96, '#DF5353'] // green
-          ],
+              [0.5, '#DDDF0D'], // red
+              [0.85, '#55BF3B'], // yellow
+              [1, '#DF5353'] // green
+          ],*/
           lineWidth: 0,
           minorTickInterval: null,
           tickAmount: 2,
@@ -80,7 +89,7 @@ export class GaugeChartComponent implements OnInit {
 
       series: [{
         name: 'Percentual',
-        data: [97],
+        data: [0],
         dataLabels: {
             format: '<div style="text-align:center"><span style="font-size:25px;color:' +
                 'black' + '">{y}</span><br/>' +
@@ -94,15 +103,20 @@ export class GaugeChartComponent implements OnInit {
   }
 
   loadDataChart() {
-    let perc = 96;
-    this.gaugeChartOptions.series[0].data[0] = perc;
-    if (perc <= 80) {
-      this.gaugeChartOptions.subtitle.text = '';
-    } else if (perc <= 95) {
-      this.gaugeChartOptions.subtitle.text = 'Atenção, Realize um novo desembolso';
-    }  else {
-      this.gaugeChartOptions.subtitle.text = 'Saldo quase acabando, realize um novo desembolso';
-    }
+    this.graficoService.findPercentualAvancoDesembolsoPorProjeto().subscribe(
+      vlPercental => {
+        if (vlPercental < 80) {
+          this.options.subtitle.text = '';
+        } else if (vlPercental < 95) {
+          this.options.subtitle.text = 'Atenção providenciar novo desembolso';
+        } else {
+          this.options.subtitle.text = 'Urgente providenciar novo desembolso';
+        }
+        this.options.series[0].data[0] = vlPercental;
+      }
+    );
+
+    
   }
 
 }
