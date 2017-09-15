@@ -1,8 +1,8 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { NotFoundComponentComponent } from './configuration/not-found-component/not-found-component.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { NotFoundComponentComponent } from './config/not-found-component/not-found-component.component';
 
 const appRoutes: Routes = [
     { path: '', component: DashboardComponent},

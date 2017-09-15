@@ -5,8 +5,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-design/material.module';
 
-import { AppConfigModule } from './app-config.module';
-import { ConfigModule } from './config/config.module';
+import { ConfigurationModule } from './configuration/configuration.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AppComponent } from './app.component';
 import { GraficoModule } from './grafico/grafico.module';
@@ -25,11 +24,10 @@ import 'hammerjs'
     BrowserModule,
     HttpModule,
     BrowserAnimationsModule,
-    AppConfigModule,
     MaterialModule,
     DashboardModule,
     GraficoModule,
-    ConfigModule,
+    ConfigurationModule,
     appRouting
   ],
   providers: [

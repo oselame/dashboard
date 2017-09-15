@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
 
-import { APP_CONFIG, AppConfig } from '../../app-config.module';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class DesembolsoService {
 
-  serverApi = 'http://soft031-075:9190/sigp-services/api/';
+  serverUrl = environment.apiUrl;
 
-  constructor(private config: AppConfig) { 
-    console.log(config.apiEndpoint);
-  }
+  constructor() {}
 
 }

@@ -17,4 +17,4 @@ import { NotFoundComponentComponent } from './not-found-component/not-found-comp
     providers: [
     ]
 })
-export class ConfigModule { }
+export class ConfigurationModule { }
