@@ -1,19 +1,19 @@
 <md-grid-list cols="2" rowHeight="2:1" gutterSize="5">
     <md-grid-tile [colspan]="1" [rowspan]="1">
         <md-card>
-            <app-gauge-chart></app-gauge-chart>
+            <app-linechart title="Grafico de linhas" [series]="lineChartValues"></app-linechart>
         </md-card>
     </md-grid-tile>
 
     <md-grid-tile>
         <md-card>
-            2
+            <!-- <app-piechart title="Pie Chart" [series]="pieChartSeries"></app-piechart> -->
         </md-card>
     </md-grid-tile>
 
     <md-grid-tile>
         <md-card>
-            3
+            <app-solidgaugechart title="Percentual Desembolsado" [series]="solidChartSeries"></app-solidgaugechart>
         </md-card>
     </md-grid-tile>
 
