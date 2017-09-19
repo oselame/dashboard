@@ -5,3 +5,9 @@
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body {
+    margin: 0px;
+}
+section {
+    padding-top: 5px;
+}

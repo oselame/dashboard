@@ -10,6 +10,8 @@ import { SolidgaugechartComponent } from './solidgaugechart/solidgaugechart.comp
 
 import * as highcharts from 'highcharts';
 import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
+import { XychartComponent } from './xychart/xychart.component';
+import { SplinechartComponent } from './splinechart/splinechart.component';
 export function highchartsFactory() {
     const hc = require('highcharts');
     const hcm = require('highcharts/highcharts-more');
@@ -25,7 +27,9 @@ export function highchartsFactory() {
     declarations: [
         LinechartComponent,
         PiechartComponent,
-        SolidgaugechartComponent
+        SolidgaugechartComponent,
+        XychartComponent,
+        SplinechartComponent
     ],
     imports: [
         ChartModule,
@@ -34,7 +38,9 @@ export function highchartsFactory() {
     exports: [
         LinechartComponent,
         PiechartComponent,
-        SolidgaugechartComponent
+        SolidgaugechartComponent,
+        XychartComponent,
+        SplinechartComponent
     ],
     providers: [
         {provide: HighchartsStatic, useFactory: highchartsFactory},

@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-solidgaugechart',
-  template: `<chart [options]="options"></chart>`,
+  template: `<chart [options]="options" class="app-solidgaugechart"></chart>`,
   styleUrls: ['./solidgaugechart.component.css']
 })
 export class SolidgaugechartComponent implements OnInit {

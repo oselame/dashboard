@@ -4,7 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-linechart',
-  template: `<chart [options]="options"></chart>`,
+  template: `<chart [options]="options" class="app-linechart"></chart>`,
   styleUrls: ['./linechart.component.css']
 })
 export class LinechartComponent implements OnInit {
@@ -20,6 +20,14 @@ export class LinechartComponent implements OnInit {
     this.options = {
       title : {
         text: this.title
+      },
+      yAxis: {
+        title: {
+            text: 'Number of Employees'
+        }
+      },
+      credits: {
+        enabled: false
       },
       series: this.series
   };
