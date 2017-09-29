@@ -1,37 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material-design/material.module';
+import { ROUTES } from './app.routes';
 
-import { ConfigurationModule } from './configuration/configuration.module';
-import { DashboardModule } from './dashboard/dashboard.module';
 import { AppComponent } from './app.component';
-import { GraficoModule } from './grafico/grafico.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MensagensComponent } from './mensagens/mensagens.component';
 
-import { DesembolsoService } from './services/desembolso/desembolso.service';
-
-import { appRouting } from './app.routing';
-
-import 'hammerjs'
+import { MensagemService } from './mensagens/mensagem.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    MensagensComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    DashboardModule,
-    GraficoModule,
-    ConfigurationModule,
-    appRouting
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    DesembolsoService
+    MensagemService
   ],
   bootstrap: [AppComponent]
 })
