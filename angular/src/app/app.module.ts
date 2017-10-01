@@ -12,8 +12,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 
 import { MensagemService } from './dashboard/mensagens/mensagem.service';
+import { GraficoService } from './dashboard/graficos/grafico.service';
+
 import { MensagemListComponent } from './dashboard/mensagens/mensagem-list/mensagem-list.component';
 import { MensagemComponent } from './dashboard/mensagens/mensagem/mensagem.component';
+import { AvancodesembolsoComponent } from './dashboard/graficos/avancodesembolso/avancodesembolso.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { MensagemComponent } from './dashboard/mensagens/mensagem/mensagem.compo
     MensagensComponent,
     NotfoundComponent,
     MensagemListComponent,
-    MensagemComponent
+    MensagemComponent,
+    AvancodesembolsoComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import { MensagemComponent } from './dashboard/mensagens/mensagem/mensagem.compo
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    MensagemService
+    MensagemService,
+    GraficoService
   ],
   bootstrap: [AppComponent]
 })

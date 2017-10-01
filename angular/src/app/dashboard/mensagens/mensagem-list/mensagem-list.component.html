@@ -1,4 +1,16 @@
 <div>
-  <h2>{{mensagem?.deMensagem}}</h2>
-1
-</div>
+  <div class="row">
+    <div class="grid-example col s12 m12 l12">
+      <div class="card-panel hoverable center-align">
+        <h3>{{mensagem.deMensagem}}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="grid-example col s12 m6 l6" *ngFor="let pendencia of mensagem.pendencias">
+      <div class="card-panel hoverable">
+        <span [innerHTML]="pendencia.deMensagem"></span>
+      </div>
+    </div>
+  </div>

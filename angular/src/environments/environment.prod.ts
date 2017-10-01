@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  serverApi: 'http://soft031-075.softplan.com.br:9190/sigp-services/api'
+  serverApi: 'http://server162.softplan.com.br:9190/sigp-services/api'
 };

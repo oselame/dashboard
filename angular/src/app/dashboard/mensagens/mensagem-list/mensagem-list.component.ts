@@ -1,4 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { MensagemService } from './../mensagem.service';
 
 import { Mensagem } from './../mensagem.model';
 
@@ -9,11 +12,26 @@ import { Mensagem } from './../mensagem.model';
 })
 export class MensagemListComponent implements OnInit {
 
-  @Input() mensagem: Mensagem;
+  cdProjeto: number;
+  cdMensagem: number;
+  mensagem: any = {};
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+              private mensagemService: MensagemService) { }
 
   ngOnInit() {
+    this.cdProjeto = this.route.parent.snapshot.params['cdProjeto'];
+    this.cdMensagem = this.route.snapshot.params['cdMensagem'];
+
+    this.mensagemService.getMensagensSistema(this.cdProjeto).subscribe(
+      mensagens => {
+        this.mensagem = mensagens.filter(mensagem => {
+            return Number(mensagem.cdMensagem) === Number(this.cdMensagem);
+          }
+        )[0];
+      }
+    );
+
   }
 
 }

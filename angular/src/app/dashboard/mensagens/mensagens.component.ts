@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 
 import { MensagemService } from './mensagem.service';
 
@@ -13,15 +14,15 @@ import { Mensagem } from './mensagem.model';
 export class MensagensComponent implements OnInit {
 
   cdProjeto: number;
-  mensagens: Mensagem[] = [];
+  mensagens: Observable<any>;
 
   constructor(private mensagemService: MensagemService,
               private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.cdProjeto = this.route.parent.snapshot.params['cdProjeto'];
-    this.mensagemService.getMensagensSistema(this.cdProjeto)
-      .subscribe(mensagens => this.mensagens = mensagens);
+
+    this.mensagens = this.mensagemService.getMensagensSistema(this.cdProjeto);
   }
 
 }

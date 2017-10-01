@@ -1,6 +1,8 @@
 import { Mensagem } from './mensagem.model';
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 import { environment } from './../../../environments/environment';
@@ -12,7 +14,7 @@ export class MensagemService {
 
   constructor(private http: Http) {}
 
-  getMensagensSistema(cdProjeto) {
+  getMensagensSistema(cdProjeto): Observable<any> {
     return this.http.get(`${this.apiRest}/pendencia/buscaPendenciasDoSistema?cdProjeto=${cdProjeto}`)
       .map(pendencias => pendencias.json());
   }
