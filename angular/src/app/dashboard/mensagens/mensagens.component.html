@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="grid-example col s12 m6">
+    <div class="card-panel hoverable">
+      <table class="highlight">
+        <tbody>
+          <tr *ngFor="let mensagem of mensagens | async">
+            <td *ngIf="mensagem.nuQtdependencias > 0">
+              <ds-mensagem [mensagem]="mensagem"></ds-mensagem>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="grid-example col s12 m6">
+    <div class="card-panel hoverable"> Hoverable Card Panel</div>
+  </div>
+  <div class="grid-example col s12 m6">
+    <div class="card-panel hoverable"> Hoverable Card Panel</div>
+  </div>
+  <div class="grid-example col s12 m6">
+    <div class="card-panel hoverable"> Hoverable Card Panel</div>
+  </div>
+  <div class="grid-example col s12 m6">
+    <div class="card-panel hoverable"> Hoverable Card Panel</div>
+  </div>
+  <div class="grid-example col s12 m6">
+    <div class="card-panel hoverable"> Hoverable Card Panel</div>
+  </div>
+</div>

@@ -1,22 +1,12 @@
-<div class="row">
-  <div class="grid-example col s12 m6">
-    <div class="card-panel hoverable">
-      fsadfsda
-    </div>
+<nav class="nav-extended teal lighten-2">
+  <div class="nav-content">
+    <ul class="tabs tabs-transparent">
+      <li class="tab"><a routerLinkActive="active" [routerLink]="['graficos']">Gráficos</a></li>
+      <li class="tab"><a routerLinkActive="active" [routerLink]="['mensagens']">Mensagens</a></li>
+    </ul>
   </div>
-  <div class="grid-example col s12 m6">
-    <div class="card-panel hoverable"> Hoverable Card Panel</div>
-  </div>
-  <div class="grid-example col s12 m6">
-    <div class="card-panel hoverable"> Hoverable Card Panel</div>
-  </div>
-  <div class="grid-example col s12 m6">
-    <div class="card-panel hoverable"> Hoverable Card Panel</div>
-  </div>
-  <div class="grid-example col s12 m6">
-    <div class="card-panel hoverable"> Hoverable Card Panel</div>
-  </div>
-  <div class="grid-example col s12 m6">
-    <div class="card-panel hoverable"> Hoverable Card Panel</div>
-  </div>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
 </div>

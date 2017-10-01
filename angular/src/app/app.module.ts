@@ -6,16 +6,24 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
+import { MensagensComponent } from './dashboard/mensagens/mensagens.component';
+import { GraficosComponent } from './dashboard/graficos/graficos.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MensagensComponent } from './mensagens/mensagens.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
-import { MensagemService } from './mensagens/mensagem.service';
+import { MensagemService } from './dashboard/mensagens/mensagem.service';
+import { MensagemListComponent } from './dashboard/mensagens/mensagem-list/mensagem-list.component';
+import { MensagemComponent } from './dashboard/mensagens/mensagem/mensagem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    MensagensComponent
+    GraficosComponent,
+    MensagensComponent,
+    NotfoundComponent,
+    MensagemListComponent,
+    MensagemComponent
   ],
   imports: [
     BrowserModule,
