@@ -17,6 +17,7 @@ import { GraficoService } from './dashboard/graficos/grafico.service';
 import { MensagemListComponent } from './dashboard/mensagens/mensagem-list/mensagem-list.component';
 import { MensagemComponent } from './dashboard/mensagens/mensagem/mensagem.component';
 import { AvancodesembolsoComponent } from './dashboard/graficos/avancodesembolso/avancodesembolso.component';
+import { PrevistoRealizadoComponent } from './dashboard/graficos/previsto-realizado/previsto-realizado.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AvancodesembolsoComponent } from './dashboard/graficos/avancodesembolso
     NotfoundComponent,
     MensagemListComponent,
     MensagemComponent,
-    AvancodesembolsoComponent
+    AvancodesembolsoComponent,
+    PrevistoRealizadoComponent
   ],
   imports: [
     BrowserModule,

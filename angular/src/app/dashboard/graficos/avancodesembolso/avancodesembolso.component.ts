@@ -28,7 +28,7 @@ export class AvancodesembolsoComponent implements OnInit {
 
   criarGrafico(vlPercentual) {
     this.chart = Highcharts.chart(
-      'container',
+      'avancoDesembolsoChart',
       {
         chart: {
           type: 'gauge',
