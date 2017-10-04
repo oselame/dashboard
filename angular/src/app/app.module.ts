@@ -18,6 +18,10 @@ import { MensagemListComponent } from './dashboard/mensagens/mensagem-list/mensa
 import { MensagemComponent } from './dashboard/mensagens/mensagem/mensagem.component';
 import { AvancodesembolsoComponent } from './dashboard/graficos/avancodesembolso/avancodesembolso.component';
 import { PrevistoRealizadoComponent } from './dashboard/graficos/previsto-realizado/previsto-realizado.component';
+import { TesteComponent } from './teste/teste.component';
+import { Teste2Component } from './teste2/teste2.component';
+
+import { SelectivePreloadingStrategy } from './selective-preloading-strategy';
 
 @NgModule({
   declarations: [
@@ -29,16 +33,22 @@ import { PrevistoRealizadoComponent } from './dashboard/graficos/previsto-realiz
     MensagemListComponent,
     MensagemComponent,
     AvancodesembolsoComponent,
-    PrevistoRealizadoComponent
+    PrevistoRealizadoComponent,
+    TesteComponent,
+    Teste2Component
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES, {
+      enableTracing: false,
+      useHash: true
+    })
   ],
   providers: [
     MensagemService,
-    GraficoService
+    GraficoService,
+    SelectivePreloadingStrategy
   ],
   bootstrap: [AppComponent]
 })
