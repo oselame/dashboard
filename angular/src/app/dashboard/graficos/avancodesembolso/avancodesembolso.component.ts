@@ -13,6 +13,7 @@ import { GraficoService } from './../grafico.service';
 export class AvancodesembolsoComponent implements OnInit {
   cdProjeto: number = 0;
   chart: Highcharts;
+  vlPercentual:number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,7 +24,10 @@ export class AvancodesembolsoComponent implements OnInit {
     this.cdProjeto = this.route.parent.snapshot.params['cdProjeto'];
     
     this.graficoService.getPercentualAvancoDesembolsoPorProjeto(this.cdProjeto)
-      .subscribe(vlPercentual => this.criarGrafico(vlPercentual));
+      .subscribe(vlPercentual => {
+        this.vlPercentual = vlPercentual;
+        this.criarGrafico(vlPercentual);
+      });
   }
 
   criarGrafico(vlPercentual) {
@@ -124,7 +128,7 @@ export class AvancodesembolsoComponent implements OnInit {
             name: 'Speed',
             data: [ vlPercentual ],
             tooltip: {
-              valueSuffix: ' %'
+              valueSuffix: ' vds %'
             }
           }
         ]

@@ -22,6 +22,8 @@ import { TesteComponent } from './teste/teste.component';
 import { Teste2Component } from './teste2/teste2.component';
 
 import { SelectivePreloadingStrategy } from './selective-preloading-strategy';
+import { PoaComponent } from './dashboard/poa/poa.component';
+import { DesembolsoComponent } from './dashboard/desembolso/desembolso.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { SelectivePreloadingStrategy } from './selective-preloading-strategy';
     AvancodesembolsoComponent,
     PrevistoRealizadoComponent,
     TesteComponent,
-    Teste2Component
+    Teste2Component,
+    PoaComponent,
+    DesembolsoComponent
   ],
   imports: [
     BrowserModule,

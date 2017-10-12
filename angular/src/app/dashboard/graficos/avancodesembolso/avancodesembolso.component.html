@@ -1,1 +1,11 @@
 <div id="avancoDesembolsoChart"></div>
+<div *ngIf="vlPercentual > 80 && vlPercentual <= 90">
+    <div class="center-align blue-text text-darken-2">
+        Resta somente {{100 - vlPercentual | number}}% do desemboso
+    </div>
+</div>
+<div *ngIf="vlPercentual > 90">
+        <div class="center-align red-text text-darken-2">
+        Resta somente {{100 - vlPercentual | number}}% do desemboso
+    </div>
+</div>

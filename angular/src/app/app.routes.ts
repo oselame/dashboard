@@ -7,15 +7,16 @@ import { GraficosComponent } from './dashboard/graficos/graficos.component';
 import { MensagensComponent } from './dashboard/mensagens/mensagens.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { MensagemListComponent } from './dashboard/mensagens/mensagem-list/mensagem-list.component';
-
+import { PoaComponent } from './dashboard/poa/poa.component';
+import { DesembolsoComponent } from './dashboard/desembolso/desembolso.component';
 
 export const ROUTES: Routes = [
-    {path: '', component: TesteComponent},
-    {path: 'teste2', component: Teste2Component},
+    {path: '', component: NotfoundComponent},
     {path: 'dashboard/:cdProjeto', component: DashboardComponent,
         children: [
-            { path: '', redirectTo: 'graficos', pathMatch: 'full'},
-            { path: 'graficos', component: GraficosComponent},
+            { path: '', redirectTo: 'poa', pathMatch: 'full'},
+            { path: 'poa', component: PoaComponent},
+            { path: 'desembolso', component: DesembolsoComponent},
             { path: 'mensagens', component: MensagensComponent},
             { path: 'mensagens-list/:cdMensagem', component: MensagemListComponent}
         ]
